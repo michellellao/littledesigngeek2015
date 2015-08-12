@@ -1,0 +1,245 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0;
+}
+
+/* Page Elements */
+body, div {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 300;
+	font-style: normal;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+body { /*content including background */
+	background:#f7f7f7 url('../img/bg-noise.png');
+	width: 100%;
+	text-align: center;
+}
+
+.wrapper {
+	max-width: 62.5em;
+	overflow: hidden;
+	padding: 0 5%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+
+/* Text Styles*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Raleway', sans-serif;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+	margin: 0;
+	text-align: center;
+}
+
+h1 { /* Headline */
+	font-size: 1.75em;
+	text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
+	font-weight: 700;
+	line-height: initial;
+}
+
+h2 { /* Title */
+	font-size: 2em;
+	text-shadow: 1px 2px 0 rgba(0, 0, 0, 0.3);
+	font-weight: 700;
+	padding: 0 0.45em;
+}
+
+h3 { /* Name Title */
+	font-size: 1.5em;
+	font-weight: 200;
+	padding: 0.5em 0 0;
+}
+
+h4 { /* Project Title */
+	font-size: 1.5em;
+	font-weight: 500;
+}
+
+h5 { /* Thin Title */
+	font-size: 1.125em;
+	font-weight: 300;
+	padding: 0.125em 0 0;
+}
+
+
+p {
+	font-size: 0.9em;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+	text-align: left;
+	padding: 0.25em 1em 0;
+	margin: 0 0 0.5em;
+}
+
+.semi-bold {
+	font-weight: 500;
+}
+
+
+/* Layouts */
+.center-content {
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+
+/* Page Sections */
+#nav, #small-nav {
+	background-color:rgba(32,53,64,0.85);
+	position: fixed;
+	top: 0;
+	z-index: 10;
+	width: 100%;
+	padding: 0.75em 0.5em 0.25em;
+}
+
+#nav #home {
+	float: left;
+}
+
+#nav img.top {
+	position: relative;
+	top: -0.1em;
+	width: 12%;
+	padding-right: 0.5em;
+}
+
+#nav #anchors {
+	float: right;
+}
+
+#nav a, #small-nav a {
+	color: #ffffff;
+	opacity: 0.75;
+	padding: 0.5em;
+	font-weight: 500;
+	text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.5);
+	transition: all 0.3s ease 0.1s;
+}
+
+#nav a:hover, #small-nav a:hover {
+	opacity: 1;
+}
+
+#small-nav {
+	text-align: center;
+}
+
+#small-nav img.top {
+	position: relative;
+	top: -0.1em;
+	width: 1.75em;
+	padding-right: 0.5em;
+}
+
+
+#cover {
+	width: 100%;
+	height: 80%;
+	background:
+		linear-gradient(to bottom, rgba(0, 64, 153, 1) 0%, rgba(0, 64, 153, 0) 75%), 
+		url('../img/photo/cover.jpg') center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+img#profile {
+	width: 25%;
+	border-radius: 50%;
+}
+
+
+
+#work{
+	min-height: 100%;
+	padding: 5% 5% 0;
+}
+
+
+#about {
+	width: 100%;
+	min-height: 90%;
+	background:
+		linear-gradient(to bottom, rgba(0, 69, 166, 0.75) 25%, rgba(0, 172, 229, 0.5) 60%, rgba(242, 232, 182, 0.3) 90%, rgba(242, 232, 182, 0) 100%), 
+		url('../img/photo/about.jpg') center center no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding: 10% 2% 5%;
+  }
+
+#about h2 {text-align: left;}
+
+#contact {
+	min-height: 67%;
+	padding: 5%;
+	background: 
+		url('../img/bg-noise.png'),
+		linear-gradient(to bottom, rgba(16, 48, 64, 1) 40%, rgba(32, 104, 128, 0.5) 80%, rgba(32, 104, 128, 0.5) 85%, rgba(16, 48, 64, 0.75) 100%), 
+		url('../img/photo/contact-bg.jpg') center center no-repeat;
+	background-attachment: fixed;
+	/*background: linear-gradient(to bottom, rgba(32, 40, 47, 0.5) 10%, rgba(42, 74, 90, 0.5) 90%), url('../img/photo/bg-contact.jpg'); */
+	color: #ffffff;
+	text-align: center;
+}
+
+#contact-content {z-index: 10;}
+
+#contact h2 {font-size: 300%;}
+
+#contact img {
+	padding: 20% 5%;
+	opacity: 0.6;
+	transition: all 0.3s ease 0s;
+	-webkit-backface-visibility:hidden;
+}
+
+#contact img:hover {
+	opacity: 1;
+}
+
+#contact p#myemail {
+	text-align: center;
+	color: #c3dde5;
+	margin: 0 0 0.5em;
+	display: none;
+}
+
+#copyright {
+	background-color: #1a2a33;
+	color: rgba(195, 221, 229, 0.5);
+}
+
+#copyright > p {
+	margin: 0;
+	padding: 0.5em;
+	text-align: center;
+	font-size: 75%;
+}
+
+
+
+/* Medium screen */
+@media only screen and (max-width: 64em) {
+	p {font-size: 1em;}
+	img#profile {width: 35%;}
+	#contact {min-height: 40%;}
+}
+
+
+/* Small screen */
+@media only screen and (max-width: 40em) { 
+	html {font-size: 90%;}
+	img#profile {width: 50%;}
+	h1 {font-size: 110%;}
+	#cover {height: 100%;}
+	#about > .wrapper {padding: 0;}
+}
